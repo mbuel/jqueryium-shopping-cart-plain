@@ -1,0 +1,15 @@
+.container>.row {
+    margin-bottom:10px;
+    border-bottom: 1px solid black;
+}
+.container > .row:nth-child(odd) {
+    background-color:lightblue;
+}
+
+.total {
+    border-right: 1px black solid
+}
+
+.btn-remove {
+    cursor: pointer;
+}
