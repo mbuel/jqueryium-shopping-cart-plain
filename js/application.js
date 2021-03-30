@@ -50,8 +50,7 @@ var updateRowTotalCost = function(row) {
     };
 }
 
-
-$(document).ready(function () {
+var updateTotalCosts = function() {
     var totalCost = 0;
     var totalItems = 0;
     $('.list > .grocery-item').each(function(i, ele) {
@@ -60,6 +59,44 @@ $(document).ready(function () {
         totalItems += itemQty;
         totalCost += rowCostTotal;
     });
-    $('#total-items').text(totalItems);
+    $('#total-items').text(Math.floor(totalItems));
     $('#total-cost').text(formatter.format(totalCost));
+}
+
+var addItemToList = function() {
+    var item = $('#new-item').val();
+    var qty = $('#new-qty').val();
+    var cost = $('#new-cost').val();
+    
+    console.log(item, qty, cost);
+
+    // check values
+
+    if (!item || !qty || !cost) {
+        alert('Cannot add this item to the list.');
+        return;
+    }
+
+    var item = templateString.replace(/%ITEM%/, item).replace(/%QTY%/, qty).replace(/%PRICE%/, cost);
+
+    $('.list').append(item);
+
+    updateTotalCosts();
+}
+
+$(document).ready(function () {
+    updateTotalCosts();
+
+    var timeout;
+    $('.list').on('input', function (event) {
+      console.log(event);
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        updateTotalCosts();
+      }, 250);
+    });
+
+    $('.add').on('click', addItemToList); 
+
+
 });
