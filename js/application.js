@@ -97,13 +97,8 @@ $(document).ready(function () {
     updateTotalCosts();
     
     $('.list').parent().on('click', '.remove', function (event) {
-        console.log(event.currentTarget.parentNode.parentNode.parentNode.parentNode);
-        console.log(this);
-        console.log($(this).parent().parent().parent().parent());
-
 
         $(this).parent().parent().parent().parent().remove();
-
         updateTotalCosts();
 
     });
