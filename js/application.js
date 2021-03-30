@@ -17,7 +17,7 @@ var templateString = `<!-- Template Row to add per item -->
         </div>
         <div class="col-3">
           <!-- item remove -->
-          <div class="row">
+          <div class="summary row">
             <div class="total col-6 text-success">
               %TOTAL%
             </div>
@@ -84,19 +84,34 @@ var addItemToList = function() {
     updateTotalCosts();
 }
 
+
+var timeout;
+var updateList = function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+        updateTotalCosts();
+    }, 250);
+}
+
 $(document).ready(function () {
     updateTotalCosts();
+    
+    $('.list').parent().on('click', '.remove', function (event) {
+        console.log(event.currentTarget.parentNode.parentNode.parentNode.parentNode);
+        console.log(this);
+        console.log($(this).parent().parent().parent().parent());
 
-    var timeout;
-    $('.list').on('input', function (event) {
-      console.log(event);
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
+
+        $(this).parent().parent().parent().parent().remove();
+
         updateTotalCosts();
-      }, 250);
+
     });
+    
+    $('.list').on('input', updateList);
 
     $('.add').on('click', addItemToList); 
+
 
 
 });
