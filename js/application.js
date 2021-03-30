@@ -1,28 +1,65 @@
 'use strict';
 
 // template string 
-/*
-      <div class="row">
-        <div class="col-3">
-          <!-- Item name -->
+var templateString = `<!-- Template Row to add per item -->
+      <div class="row grocery-item text-center">
+        <div class="item-name col-3">
+          <!-- item name -->
+          %ITEM%
         </div>
-        <div class="col-3">
-          <!-- Unit Price -->
+        <div class="cost col-3">
+          <!-- item price -->
+          <input type="number" value="%PRICE%" />
         </div>
-        <div class="col-3">
-            <!-- Quanity -->
+        <div class="qty col-3">
+          <!-- item quantity -->
+          <input type="number" value="%QTY%" />
         </div>
         <div class="col-3">
           <!-- item remove -->
           <div class="row">
-            <div class="total col-6">
-              $ _______
+            <div class="total col-6 text-success">
+              %TOTAL%
             </div>
             <div class="col-6">
               <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
-      </div>
-*/
+      </div>`;
 
+// Currency Formatter
+// https://flaviocopes.com/how-to-format-number-as-currency-javascript/
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
+  
+
+var updateRowTotalCost = function(row) {
+    var itemQty = parseFloat($(row).find('.qty input').val());
+    var itemCost = parseFloat($(row).find('.cost input').val());
+
+    var rowCostTotal = itemQty * itemCost;
+    $(row).find('.total').text(formatter.format(rowCostTotal));
+    
+    return {
+        rowCostTotal: rowCostTotal,
+        itemQty : itemQty
+    };
+}
+
+
+$(document).ready(function () {
+    var totalCost = 0;
+    var totalItems = 0;
+    $('.list > .grocery-item').each(function(i, ele) {
+        var {rowCostTotal, itemQty} = updateRowTotalCost(ele);
+        console.log(rowCostTotal, itemQty);
+        totalItems += itemQty;
+        totalCost += rowCostTotal;
+    });
+    $('#total-items').text(totalItems);
+    $('#total-cost').text(formatter.format(totalCost));
+});
