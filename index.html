@@ -20,7 +20,7 @@
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container pt-4">
+    <div class="list container pt-4">
 
       <h1 class="pt-2 pb-4">Shopping Cart</h1>
       <div class="row font-weight-bold">
@@ -151,6 +151,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="container pt-4">
+      <div class="row">
+        <form class="col-12 mt-2 mb-4" id="addStock">
+          <input class="mx-2" name="ItemName" type="text" placeholder="Item Name" required/>
+          <input class="mx-2" name="UnitPrice" type="number" placeholder="Unit Price"/>
+          <input class="mx-2" name="Quantity" type="number" placeholder="Quantity"/>
+          <button class="btn btn-primary btn-sm">add</button>
+        </form>
       </div>
     </div>
   </body>

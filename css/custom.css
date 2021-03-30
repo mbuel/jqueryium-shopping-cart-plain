@@ -2,7 +2,7 @@
     margin-bottom:10px;
     border-bottom: 1px solid black;
 }
-.container > .row:nth-child(odd) {
+.container > .row:nth-child(even) {
     background-color:lightblue;
 }
 
