@@ -1,0 +1,33 @@
+.container>.row {
+    margin-bottom:10px;
+    padding-bottom: 5px;;
+    border-bottom: 1px solid black;
+}
+.container > .row:nth-child(even) {
+    background-color:lightblue;
+}
+
+.total {
+    border-right: 1px black solid
+}
+
+.btn {
+    cursor: pointer;
+}
+
+input {
+    width: 80%;
+    text-align: center;
+}
+
+.input-form {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* media queries */
+@media only screen and (max-width: 992px) {
+    input {
+        width: 80%;
+    }
+  }

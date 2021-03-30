@@ -14,11 +14,174 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <script src="js/application.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
+    <div class="list container pt-4">
 
+      <h1 class="pt-2 pb-4">Shopping Cart</h1>
+      <div class="row grocery-header font-weight-bold text-center">
+        <div class="col-3">
+          <!-- item name -->
+          Item Name
+        </div>
+        <div class="col-3">
+          <!-- item price -->
+          $ Unit Price
+        </div>
+        <div class="col-3">
+          <!-- item quantity -->
+          Quantity
+        </div>
+        <div class="col-3">
+          <!-- item remove -->
+          <div class="row">
+            <div class="total col-6">
+              $ Total
+
+            </div>
+            <div class="col-6">
+              Remove
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Template Row to add per item -->
+      <div class="row grocery-item text-center">
+        <div class="item-name col-3">
+          <!-- item name -->
+          Salmon
+        </div>
+        <div class="cost col-3">
+          <!-- item price -->
+          <input type="number" value="60" />
+        </div>
+        <div class="qty col-3">
+          <!-- item quantity -->
+          <input type="number" value="20" />
+        </div>
+        <div class="col-3">
+          <!-- item remove -->
+          <div class="row">
+            <div class="total col-6 text-success">
+              _______
+            </div>
+            <div class="col-6">
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row grocery-item text-center">
+        <div class="item-name col-3">
+          <!-- item name -->
+          Eggs
+        </div>
+        <div class="cost col-3">
+          <!-- item price -->
+          <input type="number" value="3" />
+        </div>
+        <div class="qty col-3">
+          <!-- item quantity -->
+          <input type="number" value="2" />
+        </div>
+        <div class="col-3">
+          <!-- item remove -->
+          <div class="row">
+            <div class="total col-6 text-success">
+              _______
+            </div>
+            <div class="col-6">
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row grocery-item text-center">
+        <div class="item-name col-3">
+          <!-- item name -->
+          Cheese
+        </div>
+        <div class="cost col-3">
+          <!-- item price -->
+          <input type="number" value="3" />
+        </div>
+        <div class="qty col-3">
+          <!-- item quantity -->
+          <input type="number" value="1" />
+        </div>
+        <div class="col-3">
+          <!-- item remove -->
+          <div class="row">
+            <div class="total col-6 text-success">
+              _______
+            </div>
+            <div class="col-6">
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row grocery-item text-center">
+        <div class="item-name col-3">
+          <!-- item name -->
+          Milk
+        </div>
+        <div class="cost col-3">
+          <!-- item price -->
+          <input type="number" value="5" />
+        </div>
+        <div class="qty col-3">
+          <!-- item quantity -->
+          <input type="number" value="6" />
+        </div>
+        <div class="col-3">
+          <!-- item remove -->
+          <div class="row">
+            <div class="total col-6 text-success">
+              _______
+            </div>
+            <div class="col-6">
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-4">
+      <div class="row input-form text-center">
+        <div class="col-3">
+          <input id="new-item" class="mx-2" name="ItemName" type="text" placeholder="Item Name" required/>
+        </div>
+        <div class="col-3">
+          <input id="new-cost" class="mx-2" name="UnitPrice" type="number" placeholder="Unit Price"/>
+        </div>
+        <div class="col-3">
+          <input id="new-qty" class="mx-2" name="Quantity" type="number" placeholder="Quantity"/>
+        </div>
+        <div class="col-3">
+          <div class="btn add btn-primary text-center rounded-pill">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-4">
+      <div class="row text-center">
+        <div class="col-6">
+          <h3>Total Items: <span id="total-items" class="text-info">TEST </span></h3>
+        </div>
+        <div class="col-6">
+          <h3>Total Cost: <span id="total-cost" class="text-success">95.5</span></h3>
+        </div>
+      </div>
+    </div>
+    <script src="./js/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </body>
 </html>
