@@ -10,6 +10,15 @@
     border-right: 1px black solid
 }
 
-.btn-remove {
+.btn {
     cursor: pointer;
+}
+
+input {
+    width: 50%;
+}
+
+.input-form {
+    border: 1px solid black;
+    padding: 5px;
 }

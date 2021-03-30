@@ -23,7 +23,7 @@
     <div class="list container pt-4">
 
       <h1 class="pt-2 pb-4">Shopping Cart</h1>
-      <div class="row font-weight-bold">
+      <div class="row grocery-header font-weight-bold">
         <div class="col-3">
           <!-- item name -->
           Item Name
@@ -52,18 +52,18 @@
         </div>
       </div>
       <!-- Template Row to add per item -->
-      <div class="row">
-        <div class="col-3">
+      <div class="row grocery-item">
+        <div class="item-name col-3">
           <!-- item name -->
           Salmon
         </div>
-        <div class="col-3">
+        <div class="cost col-3">
           <!-- item price -->
-          $60.00
+          $ <input type="number" value="60" />
         </div>
-        <div class="col-3">
+        <div class="qty btn-default">
           <!-- item quantity -->
-          QTY (INPUT)
+          QTY <input type="number" value="20" />
         </div>
         <div class="col-3">
           <!-- item remove -->
@@ -72,19 +72,19 @@
               $ _______
             </div>
             <div class="col-6">
-              <div class="btn-remove btn-danger text-center rounded-pill">remove</div>
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row grocery-item">
         <div class="col-3">
           <!-- item name -->
-          Salmon
+          Eggs
         </div>
         <div class="col-3">
           <!-- item price -->
-          $60.00
+          $3.00
         </div>
         <div class="col-3">
           <!-- item quantity -->
@@ -97,19 +97,19 @@
               $ _______
             </div>
             <div class="col-6">
-              <div class="btn-remove btn-danger text-center rounded-pill">remove</div>
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row grocery-item">
         <div class="col-3">
           <!-- item name -->
-          Salmon
+          Cheese
         </div>
         <div class="col-3">
           <!-- item price -->
-          $60.00
+          $6.00
         </div>
         <div class="col-3">
           <!-- item quantity -->
@@ -122,19 +122,19 @@
               $ _______
             </div>
             <div class="col-6">
-              <div class="btn-remove btn-danger text-center rounded-pill">remove</div>
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row grocery-item">
         <div class="col-3">
           <!-- item name -->
-          Salmon
+          Milk
         </div>
         <div class="col-3">
           <!-- item price -->
-          $60.00
+          $5.00
         </div>
         <div class="col-3">
           <!-- item quantity -->
@@ -147,21 +147,31 @@
               $ _______
             </div>
             <div class="col-6">
-              <div class="btn-remove btn-danger text-center rounded-pill">remove</div>
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="container pt-4">
-      <div class="row">
-        <form class="col-12 mt-2 mb-4" id="addStock">
+      <div class="row input-form">
+        <div class="col-3">
           <input class="mx-2" name="ItemName" type="text" placeholder="Item Name" required/>
+        </div>
+        <div class="col-3">
           <input class="mx-2" name="UnitPrice" type="number" placeholder="Unit Price"/>
+        </div>
+        <div class="col-3">
           <input class="mx-2" name="Quantity" type="number" placeholder="Quantity"/>
-          <button class="btn btn-primary btn-sm">add</button>
-        </form>
+        </div>
+        <div class="col-3">
+          <div class="btn add btn-primary text-center rounded-pill">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="./js/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </body>
 </html>

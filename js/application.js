@@ -19,7 +19,7 @@
               $ _______
             </div>
             <div class="col-6">
-              <div class="btn-remove btn-danger text-center rounded-pill">remove</div>
+              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
