@@ -23,7 +23,8 @@ a {
     top: -1px;
     left: -1px;
     color: var(--rgba-top-color-0) !important;
-    transition: position 1s;
+    /* transition: position 1s; */
+    transition: all ease-in 0.1s;
   }
   
   a:hover {
@@ -31,7 +32,7 @@ a {
     left: 1px;
     color: var(--rgba-secondary-2-0) !important;
     text-decoration: none !important;
-    font-size: 1.1em;
+    transform: scale(1.1);
   }
 
 container>.row {

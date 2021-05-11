@@ -33,13 +33,22 @@ const updateListeners = () => {
 
 
   price = Array.from(document.querySelectorAll('.cost input'));
+
   price.forEach(el => {
     el.addEventListener('input', function(e) {
       updateTotalCosts();
       console.log(e);
     });
   });
+
   qty = Array.from(document.querySelectorAll('.qty input'));
+
+  qty.forEach(el => {
+    el.addEventListener('input', function(e) {
+      updateTotalCosts();
+      console.log(e);
+    });
+  });
   
   add = document.querySelector('.add').addEventListener('click', addItemToList);
 
