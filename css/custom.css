@@ -16,6 +16,7 @@
   }
 body {
     padding-bottom: 20px;
+    
 }
 
 a {
@@ -23,8 +24,28 @@ a {
     top: -1px;
     left: -1px;
     color: var(--rgba-top-color-0) !important;
-    /* transition: position 1s; */
-    transition: all ease-in 0.1s;
+    transition: all ease-in 0.2s;
+    
+  }
+
+  .grocery-item {
+    transition: all ease-in 0.2s;
+  }
+
+  .grocery-item.grow {
+      transform: scale(1.0);
+  }
+
+  .grocery-item.shrink {
+      transform: scale(0.1);
+  }
+
+  .button {
+    transition: all ease-in 0.2s;
+  }
+
+  .button:hover {
+    transform: scale(1.1);
   }
   
   a:hover {
