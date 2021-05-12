@@ -9,41 +9,42 @@
     <meta name="description" content="Shopping Cart">
     <meta name="author" content="Morris Buel">
 
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script> -->
     <script src="js/application.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script src="./js/bootstrap.min.js"></script> -->
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/siimple.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" rel="stylesheet" >
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <div class="list container pt-4">
+    <div class="container list has-text-centered pt-4">
 
-      <h1 class="pt-2 pb-4">Shopping Cart</h1>
-      <div class="row grocery-header font-weight-bold text-center">
-        <div class="col-3">
+      <h1 class="title pt-2 pb-4 is-1 is-centered">Shopping Cart</h1>
+      <div class="columns grocery-header has-text-weight-bold has-justify-content-center">
+        <div class="column is-one-quarter">
           <!-- item name -->
           Item Name
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item price -->
           $ Unit Price
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item quantity -->
           Quantity
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item remove -->
-          <div class="row">
-            <div class="total col-6">
+          <div class="columns">
+            <div class="total column is-one-half">
               $ Total
 
             </div>
-            <div class="col-6">
+            <div class="column is-one-half">
               Remove
 
             </div>
@@ -51,133 +52,133 @@
           
         </div>
       </div>
-      <!-- Template Row to add per item -->
-      <div class="row grocery-item text-center">
-        <div class="item-name col-3">
+      <!-- Template columns to add per item -->
+      <div class="columns grocery-item text-center">
+        <div class="item-name column is-one-quarter" >
           <!-- item name -->
           Salmon
         </div>
-        <div class="cost col-3">
+        <div class="cost column is-one-quarter">
           <!-- item price -->
           <input type="number" value="60" />
         </div>
-        <div class="qty col-3">
+        <div class="qty column is-one-quarter">
           <!-- item quantity -->
           <input type="number" value="20" />
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item remove -->
-          <div class="summary row">
-            <div class="total col-6 text-success">
+          <div class="summary columns">
+            <div class="total column is-one-half text-success">
               _______
             </div>
-            <div class="col-6">
-              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            <div class="column is-one-half">
+              <div class="button remove is-danger is-centered is-rounded"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row grocery-item text-center">
-        <div class="item-name col-3">
+      <div class="columns grocery-item text-center">
+        <div class="item-name column is-one-quarter">
           <!-- item name -->
           Eggs
         </div>
-        <div class="cost col-3">
+        <div class="cost column is-one-quarter">
           <!-- item price -->
           <input type="number" value="3" />
         </div>
-        <div class="qty col-3">
+        <div class="qty column is-one-quarter">
           <!-- item quantity -->
           <input type="number" value="2" />
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item remove -->
-          <div class="summary row">
-            <div class="total col-6 text-success">
+          <div class="summary columns">
+            <div class="total column is-one-half text-success">
               _______
             </div>
-            <div class="col-6">
-              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            <div class="column is-one-half">
+              <div class="button remove is-danger is-centered is-rounded"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row grocery-item text-center">
-        <div class="item-name col-3">
+      <div class="columns grocery-item text-center">
+        <div class="item-name column is-one-quarter">
           <!-- item name -->
           Cheese
         </div>
-        <div class="cost col-3">
+        <div class="cost column is-one-quarter">
           <!-- item price -->
           <input type="number" value="3" />
         </div>
-        <div class="qty col-3">
+        <div class="qty column is-one-quarter">
           <!-- item quantity -->
           <input type="number" value="1" />
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <!-- item remove -->
-          <div class="summary row">
-            <div class="total col-6 text-success">
+          <div class="summary columns">
+            <div class="total column is-one-half text-success">
               _______
             </div>
-            <div class="col-6">
-              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            <div class="column is-one-half">
+              <div class="button remove is-danger is-centered is-rounded"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row grocery-item text-center">
-        <div class="item-name col-3">
+      <div class="columns grocery-item text-center">
+        <div class="item-name column is-one-quarter">
           <!-- item name -->
           Milk
         </div>
-        <div class="cost col-3">
+        <div class="cost column is-one-quarter">
           <!-- item price -->
           <input type="number" value="5" />
         </div>
-        <div class="qty col-3">
+        <div class="qty column is-one-quarter">
           <!-- item quantity -->
           <input type="number" value="6" />
         </div>
-        <div class="summary col-3">
+        <div class="summary column is-one-quarter">
           <!-- item remove -->
-          <div class="row">
-            <div class="total col-6 text-success">
+          <div class="columns">
+            <div class="total column is-one-half">
               _______
             </div>
-            <div class="col-6">
-              <div class="btn remove btn-danger text-center rounded-pill"><i class="fa fa-remove"></i></div>
+            <div class="column is-one-half">
+              <div class="button remove is-danger is-centered is-rounded"><i class="fa fa-remove"></i></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container pt-4">
-      <div class="row input-form text-center">
-        <div class="col-3">
+    <div class="container pt-4 mt-4">
+      <div class="columns input-form">
+        <div class="column is-one-quarter">
           <input id="new-item" class="mx-2" name="ItemName" type="text" placeholder="Item Name" required/>
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <input id="new-cost" class="mx-2" name="UnitPrice" type="number" placeholder="Unit Price"/>
         </div>
-        <div class="col-3">
+        <div class="column is-one-quarter">
           <input id="new-qty" class="mx-2" name="Quantity" type="number" placeholder="Quantity"/>
         </div>
-        <div class="col-3">
-          <div class="btn add btn-primary text-center rounded-pill">
+        <div class="column is-one-quarter">
+          <div class="button add is-primary is-centered is-rounded">
             <i class="fa fa-plus"></i>
           </div>
         </div>
       </div>
     </div>
-    <div class="container pt-4">
-      <div class="row text-center">
-        <div class="col-6">
-          <h3>Total Items: <span id="total-items" class="text-info">TEST </span></h3>
+    <div class="container pt-4  has-text-centered ">
+      <div class="columns text-center">
+        <div class="column is-one-half">
+          <h3 class="title is-5">Total Items: <span id="total-items" class="has-text-info">TEST </span></h3>
         </div>
-        <div class="col-6">
-          <h3>Total Cost: <span id="total-cost" class="text-success">95.5</span></h3>
+        <div class="column is-one-half ">
+          <h3 class="title is-5">Total Cost: <span id="total-cost" class=" has-text-success">95.5</span></h3>
         </div>
       </div>
     </div>
